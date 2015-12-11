@@ -143,16 +143,16 @@ describe Referencia do
             @docElectornico = DocumentoElectronico.new(["Rafael Vida"],"Blaster versus Welchi: Modelado del malware competitivo","07/05/2015","1ra","digital","Madrid","Chema Alonso","http://www.elladodelmal.com/2015/11/blaster-versus-welchi-modelado-del.html","07/05/2015")
         end
         it "Comprobar <=> (<)" do
-            expect(@libro < @revista).to eq(false)
+            expect(@libro < @revista).to eq(true)
         end
         it "Comprobar <=> (>)" do
-            expect(@libro > @revista).to eq(true)
+            expect(@libro > @revista).to eq(false)
         end
         it "Comprobar <=> (<=)" do
-            expect(@libro <= @revista).to eq(false)
+            expect(@libro <= @revista).to eq(true)
         end
         it "Comprobar <=> (>=)" do
-            expect(@libro >= @revista).to eq(true)
+            expect(@libro >= @revista).to eq(false)
         end
     end
     context "# MÓDULO ENUMERABLE" do
@@ -165,7 +165,7 @@ describe Referencia do
             @lista.insertar_final(@libro1,@revista1,@periodico1,@docElectornico1)
         end
         it "Comprobar min" do
-            expect(@lista.min == @revista1).to eq(true)
+            expect(@lista.min == @libro1).to eq(true)
         end
         #it "Comprobar max" do
          #   expect(@lista.max == @docElectornico1).to eq(true)

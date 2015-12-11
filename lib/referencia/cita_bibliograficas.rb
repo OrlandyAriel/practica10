@@ -5,6 +5,7 @@ class CitasBibliograficas
     @m_lista = a_lista
     ordenarlista
   end
+  
   def ordenarlista
     t_lista_aux= Lista.new
 
