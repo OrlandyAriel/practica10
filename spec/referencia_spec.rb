@@ -190,5 +190,9 @@ describe Referencia do
          it "Comprobar que se puede obtener un string con toda la lista, to_s" do
             expect(@cita.respond_to?(:to_s)).to eq(true)
         end
+        it "Comprueba que existe un metodo que ordene la lista de citas" do
+            expect(@cita.respond_to?(:ordenarlista)).to eq(true)
+        end
+        
     end
 end
