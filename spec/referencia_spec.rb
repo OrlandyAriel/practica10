@@ -187,5 +187,8 @@ describe Referencia do
         it "Comprobar que se puede crear una cita" do
             t_cita= CitasBibliograficas.new(@lista)
         end
+         it "Comprobar que se puede obtener un string con toda la lista, to_s" do
+            expect(@cita.respond_to?(:to_s)).to eq(true)
+        end
     end
 end
