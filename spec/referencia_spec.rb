@@ -174,5 +174,18 @@ describe Referencia do
             expect(@lista.count).to eq(3)
         end
     end
-    
+    context "# Citas Referencias" do
+        before :each do
+            @lib1 = Libro.new(["George Martin"],"Juego de Tronos: Cancion de Hielo y Fuego","2006", "1","1ra","Tenerife","Gigamesh",["ISBN:9788496208377"])
+            @periodico1 = Periodico.new(["Risto Mejide"],"Un artículo de los de antes","2014","elPeriódico","1-1")
+            @docElectornico1 = DocumentoElectronico.new(["Orlandy Sanchez"],"Trucos de ruby","02/12/2015","1ra","digital","Carrel del CC","Responsable del cc","cc.etsii.ull.es","10/12/2015")
+            @revista1 = Revista.new(["Ellen tarantino"],"Busca del tesoro","2015","Aventuradores", "1","3", "50")
+            @lista = Lista.new
+            @lista.insertar_final(@lib1,@periodico1,@docElectornico1,@revista1)
+           
+        end
+        it "Comprobar que se puede crear una cita" do
+            t_cita= CitaBibliograficas.new(@lista)
+        end
+    end
 end
