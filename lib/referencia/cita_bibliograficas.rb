@@ -5,7 +5,6 @@ class CitasBibliograficas
     @m_lista = a_lista
     ordenarlista
   end
-  
   def ordenarlista
     t_lista_aux= Lista.new
 
@@ -16,8 +15,10 @@ class CitasBibliograficas
     end
     @m_lista=t_lista_aux
   end
-  
- 
+  #Muestra la el orden de la lista formateada
+  def mostrar
+    @m_lista.mostar_inicio_fin
+  end
   #devuelve en forma de string todo el contenido de la lista
   def to_s
     t_resultado = ""
