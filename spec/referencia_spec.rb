@@ -182,7 +182,7 @@ describe Referencia do
             @revista1 = Revista.new(["Ellen tarantino"],"Busca del tesoro","2015","Aventuradores", "1","3", "50")
             @lista = Lista.new
             @lista.insertar_final(@lib1,@periodico1,@docElectornico1,@revista1)
-           
+            @cita = CitasBibliograficas.new(@lista)
         end
         it "Comprobar que se puede crear una cita" do
             t_cita= CitasBibliograficas.new(@lista)

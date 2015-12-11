@@ -3,9 +3,21 @@ class CitasBibliograficas
   attr_accessor :m_lista
   def initialize(a_lista)
     @m_lista = a_lista
-   
+    ordenarlista
   end
   
+  def ordenarlista
+    t_lista_aux= Lista.new
+
+    a= self.m_lista.sort
+    
+    a.each do |aaaa|
+      t_lista_aux.insertar_final(aaaa.to_s)
+    end
+    @m_lista=t_lista_aux
+  end
+  
+ 
   #devuelve en forma de string todo el contenido de la lista
   def to_s
     t_resultado = ""
