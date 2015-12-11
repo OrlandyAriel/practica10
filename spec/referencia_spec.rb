@@ -198,6 +198,5 @@ describe Referencia do
         it "Comprueba que existe un metodo que muestre las citas" do
             expect(@cita.respond_to?(:mostrar)).to eq(true)
         end
-        
     end
 end
