@@ -185,7 +185,7 @@ describe Referencia do
            
         end
         it "Comprobar que se puede crear una cita" do
-            t_cita= CitaBibliograficas.new(@lista)
+            t_cita= CitasBibliograficas.new(@lista)
         end
     end
 end
